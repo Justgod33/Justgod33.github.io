@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+	
+	
+	
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Edu+AU+VIC+WA+NT+Arrows&family=Londrina+Shadow&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Sen:wght@400..800&family=Sevillana&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Arrows&family=Londrina+Shadow&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Sen:wght@400..800&family=Sevillana&display=swap" rel="stylesheet">
+  <title>Football Blog Login</title>
+  <style>
+    body {
+      text-align: center;
+      background: url(https://media.pff.com/2024/03/101-feature-scaled.webp?w=1200&h=675);
+      background-size: cover;
+      background-position: center;
+      color: red;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+        font-family: "Sevillana", cursive;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: orange;
+      color: blue;
+        font-family: "Doto", sans-serif;
+    }
+    img {
+      border-radius: 300px;
+      }
+  </style>
+</head>
+<body>
+
+  <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO56ayZuMpJ1aMgXROiVJRorimsW3VoSTroA&s>
+  <p>Hi! I'm Justin, A Pro Football Blogger. Say hello!</p>
+   <input id="Name" type="Name" placeholder="User's Name">
+  <input id="Email" type="email" placeholder="Your email">
+  <input id="submit" type="submit">
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+	
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyBQPUISRb0YXBs-_zMUgUalT-Pj29Cw1yo",
+      authDomain: "justin-bfe1b.firebaseapp.com",
+      projectId: "justin-bfe1b",
+      storageBucket: "justin-bfe1b.firebasestorage.app",
+      messagingSenderId: "308082950558",
+      appId: "1:308082950558:web:41fe8642658e335671d68f",
+      measurementId: "G-C43HT1ZJP6"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+	const db = getDatabase(app);
+	const Name = document.querySelector("#Name") 
+	const Email = document.querySelector("#Email")
+document.querySelector('#submit').addEventListener('click', Submit)
+	
+	
+	function Submit() {
+
+		function buildTimestamp() {
+		  const now = new Date();
+		  let timestamp = now.getFullYear().toString() + "/";
+		  //const month = now.toLocaleString('default', { month: 'long' });
+
+		  let month = now.getMonth()+1   //add 1 because Javascript uses 0 for January
+		  month = month.toString()
+		  month = addLeadingZero(month)
+		  timestamp += month + "/"; 
+
+		  let date = now.getDate().toString()
+		  date = addLeadingZero(date)
+		  timestamp += date + "/";
+
+		  let hours = now.getHours().toString()
+		  hours = addLeadingZero(hours)
+		  timestamp += hours + ":";
+
+		  let minutes = now.getMinutes().toString()
+		  minutes = addLeadingZero(minutes)
+		  timestamp += minutes + ":";
+
+		  let seconds = now.getSeconds().toString()
+		  seconds = addLeadingZero(seconds)
+		  timestamp += seconds;
+  
+		  return timestamp
+		}
+	
+		function addLeadingZero(units) {
+			if (units.length < 2) {
+				units = "0" + units
+			}
+			return units
+		}
+		
+	  const timestamp = buildTimestamp()
+	  
+	  set(ref(db, timestamp), {
+		  Name: Name.value,
+	      email: Email.value,
+	  });
+
+	  Name.value = ""
+	  Email.value = ""
+	}
+	
+
+  </script>
+</body>
