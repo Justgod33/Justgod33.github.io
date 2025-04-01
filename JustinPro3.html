@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Londrina+Shadow&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Edu+AU+VIC+WA+NT+Arrows&family=Londrina+Shadow&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Bokor&family=Doto:wght@100..900&family=Edu+AU+VIC+WA+NT+Arrows&family=Lacquer&family=Londrina+Shadow&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Sen:wght@400..800&family=Sevillana&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: url(https://i.pinimg.com/originals/42/1e/af/421eaf6e2fc6d51f5afcfb08f317a961.gif);
+  
+  
+  
+}
+div {
+  height: 300px;
+  background-size: 100% 100%;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: "Edu AU VIC WA NT Arrows", cursive;
+  text-align: center;
+  font-size: 75px;
+  color: Yellow;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: Orange;
+  margin: 0px 0 70px 0;
+   font-family: "Bokor", system-ui;
+}
+p {
+  color: rgba(25,255,255,1);
+  
+  background: linear-gradient(bottom, rgba(251,192,147,1), rgba(251,192,147,.4));
+  background: -webkit-linear-gradient(bottom, rgba(251,192,147,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+  font-family: "Lacquer", system-ui; 
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url(https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTVP8fOptER7H75qWR2kqAPJOaXjMhtOr3NGmdTePN5WxqcZwo3oM3Y7YjiA5wp-myurY7uV79m59h5YS6-cD0ZPQN72uh3jnukqX_qYYNLQ-oDjaBTUBRG);
+}
+.second{
+  background-image: url(https://www.riddell.com/medias/sys_master/images/images/h5c/h8b/8803254173726/-1200Wx1200H-FB-HELMET-SPDFX-1.png);
+}
+.dessert{
+  background-image: url(https://images.dickssportinggoods.com/is/image/dkscdn/23UARMBLRSMK20WRRCLT_Black_Multi_is);
+}
+.price {
+  float: right;
+}
+
+input {
+	font-size: 22px;
+}
+
+
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+   font-family: "Bokor", system-ui;
+}
+
+     
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1> Justin's Sports Depot</h1>
+<h2>Best Sellers</h2>
+<div class="first">
+	 <input type="number" min="0" style="width: 50px" class="quantities">
+  <p>Shoulder Pads  <span class="price">$169</span><br />
+  <small>One of the best youth shoulder Pads in the game of the sport it really protects and gives you a full range of motion </small></p>
+</div>
+
+<div class="second">
+	 <input type="number" min="0" style="width: 50px" class="quantities">
+  <p>Speed Flex Helmet <span class="price">$499</span><br />
+  <small>One of the best helmets in todays game really protective and alot of the pro football players that play the sport use this helmet because of the protective and comfort of the helmet </small></p>
+</div>
+  
+<div class="dessert">
+	 <input type="number" min="0" style="width: 50px" class="quantities">
+  <p>Football Cleats  <span class="price">$87.50</span><br />
+  <small>One of the most comfortble football cleats i have ever wore helps skill players with their altheitcism and it has that touch of style that not alot of good cleats have.</small></p>
+</div>
+
+
+<br><br>
+  <input id="Name" type="Name" placeholder="User's Name">
+  <input id="Email" type="email" placeholder="Your email">
+  <input id="submit" type="submit">
+<br><br>
+
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+
+
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
+ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-database.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBenWpTyY6uIkWfRMt0NVz3yri580W7wTc",
+    authDomain: "justinpro3-50ece.firebaseapp.com",
+    databaseURL: "https://justinpro3-50ece-default-rtdb.firebaseio.com",
+    projectId: "justinpro3-50ece",
+    storageBucket: "justinpro3-50ece.firebasestorage.app",
+    messagingSenderId: "144190881888",
+    appId: "1:144190881888:web:dc84e112184d212e2ec305",
+    measurementId: "G-6JRTWFLCTJ"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+	const Name = document.querySelector("#Name") 
+	const Email = document.querySelector("#Email")
+document.querySelector('#submit').addEventListener('click', Submit)
+  const quantities = document.querySelectorAll(".quantities") 
+    const itemsList = ["Shoulder Pads", "SpeedFlex Helmet", "Cleats"]
+   const prices = document.querySelectorAll(".price") 
+	
+	
+	function Submit() {
+		
+	  const timestamp = buildTimestamp()
+		let total = 0
+		let cart = { }
+		for  (let i=0; i<quantities.length; i=i+1) {
+		  if (quantities[i].value != "0" && quantities[i].value != "") {
+			  
+			let price = prices[i].innerHTML.replace('$', '')
+			total = total + quantities[i].value * price 
+			  	
+		    cart[itemsList[i]] = parseInt(quantities[i].value) 
+		  }
+		  quantities[i].value = ""
+		}
+		
+	  
+	  set(ref(db, timestamp), {
+		  Name: Name.value,
+	      email: Email.value,
+	      cart: cart,
+          totalPrice: total,
+          paid: "not yet",
+		   
+	  });
+
+	  Name.value = ""
+	  Email.value = ""
+	}
+	
+	function buildTimestamp() {
+	  const now = new Date();
+	  let timestamp = now.getFullYear().toString() + "/";
+	  //const month = now.toLocaleString('default', { month: 'long' });
+
+	  let month = now.getMonth()+1   //add 1 because Javascript uses 0 for January
+	  month = month.toString()
+	  month = addLeadingZero(month)
+	  timestamp += month + "/"; 
+
+	  let date = now.getDate().toString()
+	  date = addLeadingZero(date)
+	  timestamp += date + "/";
+
+	  let hours = now.getHours().toString()
+	  hours = addLeadingZero(hours)
+	  timestamp += hours + ":";
+
+	  let minutes = now.getMinutes().toString()
+	  minutes = addLeadingZero(minutes)
+	  timestamp += minutes + ":";
+
+	  let seconds = now.getSeconds().toString()
+	  seconds = addLeadingZero(seconds)
+	  timestamp += seconds;
+
+	  return timestamp
+	}
+
+	function addLeadingZero(units) {
+		if (units.length < 2) {
+			units = "0" + units
+		}
+		return units
+	}
+	
+</script>
+</body>
