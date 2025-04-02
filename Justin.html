@@ -41,7 +41,9 @@
   <p>Hi! I'm Justin, A Pro Football Blogger. Say hello!</p>
    <input id="Name" type="Name" placeholder="User's Name">
   <input id="Email" type="email" placeholder="Your email">
+  <input id="Income" type="input" placeholder="Your Income">
   <input id="submit" type="submit">
+  
   <script type="module">
     // Import the functions you need from the SDKs you need
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.2/firebase-app.js";
@@ -113,10 +115,12 @@ document.querySelector('#submit').addEventListener('click', Submit)
 	  set(ref(db, timestamp), {
 		  Name: Name.value,
 	      email: Email.value,
+		  Income: Income.value,
 	  });
 
 	  Name.value = ""
 	  Email.value = ""
+	  Income.value = ""
 	}
 	
 
