@@ -76,6 +76,9 @@ small {
 .dessert{
   background-image: url(https://images.dickssportinggoods.com/is/image/dkscdn/23UARMBLRSMK20WRRCLT_Black_Multi_is);
 }
+.ball{
+  background-image: url(/Users/student/Downloads/shopping.webp);
+}
 .price {
   float: right;
 }
@@ -135,7 +138,10 @@ input {
   <p>Football Cleats  <span class="price">$87.50</span><br />
   <small>One of the most comfortble football cleats i have ever wore helps skill players with their altheitcism and it has that touch of style that not alot of good cleats have.</small></p>
 </div>
-
+<div class="ball">
+	 <input type="number" min="0" style="width: 50px" class="quantities">
+  <p>Football <span class="price">$40.50</span><br />
+  <small>One of the most comfortble football i have ever used. Nfls offical ball.</small> </p>
 
 <br><br>
   <input id="Name" type="Name" placeholder="User's Name">
@@ -179,7 +185,7 @@ input {
 	const Email = document.querySelector("#Email")
 document.querySelector('#submit').addEventListener('click', Submit)
   const quantities = document.querySelectorAll(".quantities") 
-    const itemsList = ["Shoulder Pads", "SpeedFlex Helmet", "Cleats"]
+    const itemsList = ["Shoulder Pads", "SpeedFlex Helmet", "Cleats", "Football"]
    const prices = document.querySelectorAll(".price") 
 	
 	
